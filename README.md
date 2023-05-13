@@ -1,8 +1,6 @@
-# Python3-dummy
+# Python3-app
 
 Flask app that returns a json with the aws identity caller.
-
-
 
 ## Prerequisites
 
