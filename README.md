@@ -6,6 +6,7 @@ Flask app that returns a json with the aws identity caller.
 
 - Python (version 3.6 or higher) installed
 - AWS credentials properly configured if using the `/` endpoint
+- Install the required libraries with `pip install -r requirements.txt`
 
 ## Endpoints
 
