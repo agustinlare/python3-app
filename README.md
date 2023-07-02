@@ -2,8 +2,6 @@
 
 Flask app that returns a json with the aws identity caller.
 
-
-
 ## Prerequisites
 
 - Python (version 3.6 or higher) installed
