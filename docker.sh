@@ -11,7 +11,7 @@ main (){
 }
 test (){
     echo "===> DEBUG: $IMAGE_NAME:$TAG $PORT"
-    docker run -p $PORT:$PORT --name $UNIQUEID -itd $IMAGE_NAME
+    docker run -p $PORT:$PORT --name $UNIQUEID -itd $IMAGE_NAME:$TAG
     if [ $? -ne 0 ]; then
         echo "Failed to run the Docker container."
         exit 1
