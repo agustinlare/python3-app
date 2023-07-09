@@ -6,7 +6,7 @@ PORT=8080
 UNIQUEID=$RANDOM
 
 main (){
-    docker build -t $IMAGE_NAME:$TAG .
+    docker build --build-arg EXPOSED_PORT=$PORT -t $IMAGE_NAME:$TAG .
     test
 }
 test (){
