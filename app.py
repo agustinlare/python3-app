@@ -1,6 +1,5 @@
 from flask import Flask, jsonify
 from flask import request
-from boto3.session import Session
 import logging
 import os
 import threading
@@ -14,20 +13,7 @@ switch_lock = threading.Lock()
 
 @app.route("/")
 def get_caller_identity():
-    session = Session()
-    sts_client = session.client('sts')
-
-    try:
-        response = sts_client.get_caller_identity()
-        caller_identity = {
-            'Account': response['Account'],
-            'Arn': response['Arn'],
-            'UserId': response['UserId']
-        }
-        return jsonify(caller_identity), 200
-    except Exception as e:
-        logging.error("Error retrieving caller identity: %s", str(e))
-        return jsonify({'error': 'Failed to retrieve caller identity'}), 500
+    return {"message": "Hello, World!"}, 200
 
 @app.route("/counter")
 def get_counter():
